@@ -13,7 +13,7 @@ export const SearchBox = ({ placeholder, handleChange }) => (
     //   onChange={(event) =>
     //     this.setState({ searchField: event.target.value })
     //   }
-    // This component was originall in App.js which is why it references this.setState
+    // This component was originally in App.js which is why it references this.setState
     //this.setState calls the render() method, therefore you cannot use it in the render method outside of an event or it will cause an infinite loop
     //  {
     // this.setState({ searchField: event.target.value }, () =>

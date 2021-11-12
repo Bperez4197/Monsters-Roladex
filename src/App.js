@@ -43,6 +43,7 @@ class App extends Component {
       <div className="App">
         {/* //props are whats passed into the component, placeholder monsters and handleChange in this case.
         //props.children is whats passed in between the component like, <CardList>here is in between</CardList> */}
+        <h1>Monsters Rolodex</h1>
         <SearchBox
           placeholder="Search Monster"
           handleChange={this.handleChange}
