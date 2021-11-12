@@ -4,13 +4,14 @@ import { SearchBox } from "./Components/search-box/search-box.component";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       monsters: [],
       searchField: "",
     };
+    //If I ever need to use props inside the constructor I need to pass them into the constructor and the super() method
 
     // //Here, because all of our "this"'s are in the constructor, it knows its refering to this App class
     // this.handleChange = this.handleChange.bind(this);
@@ -31,6 +32,17 @@ class App extends Component {
   // handleChange(event) {
   //   // In an event, "this" is set to the element that caused it such as a button or an input field. Therefore, we need to bind this function in our constructor so it know "this" points to the App class
   //   this.setState({ searchField: event.target.value });
+  // }
+
+  // If we ever need to use this.state or this.props in the setState method we need to pass in a function as the first argument instead of an Object. Then that function returns the Object using previousState.stateField:
+  // handleClick = () => {
+  //   this.setState((prevState, prevProps) => {
+  //     return {searchField: prevState.searchField + prevProps.increment}
+  //   })
+  // }
+
+  // handleClick = () => {
+  //   this.setState({searchField: this.state.searchField + 1})
   // }
 
   render() {
